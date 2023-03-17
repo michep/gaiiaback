@@ -18,4 +18,4 @@ async def chat(messages: list[dict]):
     message = completion.choices[0].message
     return {'message': message.content}
 
-uvicorn.run(app=app, port=8185)
+uvicorn.run(app=app, host='0.0.0.0', port=8185)
