@@ -1,8 +1,9 @@
 from fastapi import FastAPI
 import openai
 import uvicorn
+from apikey import API_KEY
 
-openai.api_key = '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'
+openai.api_key = API_KEY
 
 app: FastAPI = FastAPI()
 
@@ -17,4 +18,4 @@ async def chat(messages: list[dict]):
     message = completion.choices[0].message
     return {'message': message.content}
 
-uvicorn.run(app=app,port=8080)
+uvicorn.run(app=app, port=8185)

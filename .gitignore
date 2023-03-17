@@ -7,3 +7,5 @@ pyvenv.cfg
 share/
 include/
 Scripts/
+
+apikey.py
